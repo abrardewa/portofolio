@@ -1,0 +1,57 @@
+.main-home {
+  @apply mx-auto max-w-screen-2xl h-full lg:pt-10 px-6 xl:px-36;
+}
+.info-name {
+  @apply grid justify-center gap-1;
+}
+.text-info-name {
+  @apply text-soft-dark font-semibold text-3xl text-center font-serif;
+}
+.child-home {
+  @apply flex flex-col-reverse lg:flex-row mt-16 px-4 justify-between h-fit;
+}
+.picture {
+  @apply flex justify-center h-fit;
+}
+.picture-content {
+  @apply flex object-contain w-3/4 md:w-2/5 lg:w-3/4 xl:w-full h-auto shadow-xl rounded-full bg-bg-picture outline-dashed outline-bg-picture outline-offset-4 ring ring-bg-picture ring-offset-8;
+}
+.content-title {
+  @apply font-semibold text-xl md:text-2xl lg:text-4xl xl:text-5xl text-text-dark pt-12 lg:pt-24 leading-relaxed text-center lg:text-start dark:text-soft-white;
+}
+.sub-title {
+  @apply font-semibold text-base md:text-lg lg:text-2xl text-text-dark pt-2 pb-8 leading-relaxed dark:text-soft-white;
+}
+.button-download {
+  @apply flex flex-row items-center self-center lg:self-start justify-center lg:justify-start px-4 bg-button-download rounded-2xl w-fit shadow-sm mt-8;
+}
+.button-download .text {
+  @apply text-soft-white my-2 mx-2 text-sm  lg:text-base;
+}
+.content-child {
+  @apply flex flex-col justify-center lg:w-1/2 lg:justify-start;
+}
+.content-child .content-about {
+  @apply text-center lg:text-left text-soft-dark;
+}
+.skills {
+  @apply flex flex-wrap gap-2 px-5 py-5 shadow-lg rounded-xl justify-center lg:justify-start items-center;
+}
+.skills .items {
+  @apply flex flex-row gap-1 bg-bg-picture px-2 py-1 w-fit text-sm lg:text-base rounded-full;
+}
+.skills .items .logo {
+  @apply w-4;
+}
+.item-exp {
+  @apply px-5 py-3 my-5 lg:px-10 lg:py-5 lg:my-10 shadow-md rounded-3xl dark:bg-slate-700 backdrop-blur-xl;
+}
+.info-exp {
+  @apply flex flex-row gap-8 lg:gap-20 justify-center;
+}
+.info-exp .long-exp-content {
+  @apply font-semibold text-xl lg:text-3xl pb-2 text-center text-soft-dark dark:text-soft-white;
+}
+.info-exp .long-exp-text {
+  @apply text-sm lg:text-base text-soft-dark dark:text-soft-white;
+}

@@ -1,0 +1,33 @@
+.education {
+  @apply mx-auto max-w-screen-2xl py-12 px-6 xl:px-36;
+}
+.edu-main {
+  @apply bg-button-download dark:bg-slate-700 rounded-2xl;
+}
+.edu-main .content {
+  @apply py-3 lg:py-5 px-3 lg:px-8 grid lg:grid-cols-2;
+}
+.edu-main .content .left {
+  @apply py-3 lg:py-5 px-3 lg:px-5;
+}
+.edu-main .content .left .title {
+  @apply text-soft-dark dark:text-soft-white font-semibold text-center lg:text-start text-lg md:text-xl lg:text-2xl;
+}
+.edu-main .content .left .profile {
+  @apply flex flex-row gap-10 pt-10 items-center justify-center lg:justify-start;
+}
+.edu-main .content .left .profile .edu-pict {
+  @apply object-contain shadow-lg rounded-xl h-3/4 bg-bg-picture;
+}
+.edu-main .content .left .profile .edu-text {
+  @apply text-soft-dark dark:text-soft-white flex flex-col;
+}
+.edu-main .content .left .profile .edu-button {
+  @apply flex flex-row items-center gap-2 bg-bg-picture dark:bg-button-download w-fit px-3 py-2 rounded-3xl;
+}
+.edu-main .content .right {
+  @apply hidden lg:flex justify-around items-center;
+}
+.edu-main .content .right .picture {
+  @apply flex object-contain w-1/12 md:w-2/5 lg:w-7/12 h-auto shadow-xl rounded-3xl bg-bg-picture outline-dashed outline-bg-picture outline-offset-4 ring ring-bg-picture ring-offset-8;
+}

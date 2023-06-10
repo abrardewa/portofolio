@@ -1,0 +1,42 @@
+.navbar {
+  @apply sticky top-0 backdrop-blur-md bg-soft-white/80 dark:bg-slate-800/80 duration-300 shadow-lg sm:shadow-sm z-50;
+}
+.main-navbar {
+  @apply mx-auto max-w-7xl px-2 sm:px-6 lg:px-8;
+}
+.main-navbar .split {
+  @apply relative flex h-16 items-center justify-between;
+}
+.main-navbar .split .mobile {
+  @apply absolute inset-y-0 left-0 flex items-center sm:hidden;
+}
+.main-navbar .split .mobile .disclosure {
+  @layer inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white;
+}
+.main-navbar .split .normal {
+  @apply flex flex-1 items-center justify-center sm:items-stretch sm:justify-start;
+}
+.navbar-row {
+  @apply grid grid-cols-3;
+}
+.child-navbar {
+  @apply flex flex-row gap-12;
+}
+.text-navbar {
+  @apply text-soft-dark-disabled border-b-2 border-b-transparent hover:duration-300 hover:transition-all hover:border-b-2 font-semibold text-sm lg:text-base rounded-sm dark:text-slate-400;
+}
+.text-navbar:hover {
+  @apply text-soft-dark-disabled border-b-soft-dark-disabled dark:border-b-slate-100 dark:text-slate-100;
+}
+.child-logo {
+  @apply flex justify-center;
+}
+.logo {
+  @apply w-9 lg:w-10 h-auto fill-[#1E293B] dark:fill-slate-50;
+}
+.child-sosmed {
+  @apply flex flex-row justify-end gap-5 pl-8;
+}
+.icon {
+  @apply w-6 h-fit;
+}
