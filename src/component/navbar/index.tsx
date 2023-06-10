@@ -148,12 +148,9 @@ export default function Navbar() {
                     setCurrent(item.code);
                     localStorage.setItem("code", item.code);
                   }}
-                  className={classNames(
-                    current === item.code
-                      ? "active-mobile"
-                      : "text-soft-dark-disabled dark:text-slate-400 dark:hover:text-slate-100 w-screen",
-                    "block rounded-md px-3 py-2 text-sm font-medium"
-                  )}
+                  className={
+                    "text-soft-dark-disabled dark:text-slate-400 dark:hover:text-slate-100 w-screen block rounded-md px-3 py-2 text-sm font-medium"
+                  }
                   aria-current={current === item.code ? "page" : undefined}
                 >
                   {item.name}
