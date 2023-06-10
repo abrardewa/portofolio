@@ -150,7 +150,7 @@ export default function Home() {
         </div>
         <div className="item-exp">
           <div className="long-exp-content">
-            <CountUp start={0} end={3} duration={2.75} useEasing={true} />
+            <CountUp start={0} end={2} duration={2.75} useEasing={true} />
           </div>
           <p className="long-exp-text">Completed Projects</p>
         </div>
