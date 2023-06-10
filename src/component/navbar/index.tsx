@@ -13,10 +13,6 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
-function classNames(...classes: any) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function Navbar() {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
   const initialCode = localStorage.getItem("code");
@@ -140,8 +136,6 @@ export default function Navbar() {
               {navigation.map((item) => (
                 <button
                   key={item.name}
-                  // as="a"
-                  // href={`#${item.href}`}
                   onClick={() => {
                     let element = document.getElementById(item.href);
                     element?.scrollIntoView({ block: "center" });
