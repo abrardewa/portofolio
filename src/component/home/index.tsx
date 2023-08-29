@@ -21,7 +21,7 @@ import CountUp from "react-countup";
 export default function Home() {
   const [loading, setLoading] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
-  const [isYear, setIsYear] = useState<boolean>(false);
+
   const handleDownload = () => {
     setLoading(true);
     setTimeout(() => {
@@ -40,14 +40,14 @@ export default function Home() {
       setLoading(false);
     }, 300);
   };
+
   const getLongExp = () => {
     let today = moment();
     let startExp = moment("29 08 2022", "DD MM YYYY");
-    let longExpMonth = today.diff(startExp, "month");
     let longExpYear = today.diff(startExp, "year");
-    longExpYear > 0 && setIsYear(true);
-    return longExpYear > 0 ? longExpYear : longExpMonth;
+    return longExpYear
   };
+
   return (
     <div className="main-home" id="home">
       <div className="child-home">
@@ -145,7 +145,7 @@ export default function Home() {
             +
           </div>
           <p className="long-exp-text">
-            {isYear ? "Year Experience" : "Month Experience"}
+            Years Experience
           </p>
         </div>
         <div className="item-exp">
