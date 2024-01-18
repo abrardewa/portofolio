@@ -25,11 +25,18 @@ export default function Home() {
   const handleDownload = () => {
     setLoading(true);
     setTimeout(() => {
-      const downloadLink = document.createElement("a");
-      downloadLink.href = window.location.origin + "/CV_abrardewa.pdf";
-      downloadLink.download = "CV_abrardewa.pdf"; // File name
-      downloadLink.click();
-      setSuccess(true);
+      fetch("CV_abrardewa.pdf").then((response) => {
+        response.blob().then((blob) => {
+          const fileURL = window.URL.createObjectURL(blob);
+          let alink = document.createElement("a");
+          alink.href = fileURL;
+          alink.download = "CV_abrardewa.pdf";
+          alink.click();
+        });
+        if (response.status === 200) {
+          setSuccess(true);
+        }
+      });
       setLoading(false);
     }, 300);
   };
