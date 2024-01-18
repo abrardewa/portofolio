@@ -26,7 +26,7 @@ export default function Home() {
     setLoading(true);
     setTimeout(() => {
       const downloadLink = document.createElement("a");
-      downloadLink.href = "/CV_abrardewa.pdf"; // Path to your PDF file
+      downloadLink.href = window.location.origin + "/CV_abrardewa.pdf";
       downloadLink.download = "CV_abrardewa.pdf"; // File name
       downloadLink.click();
       setSuccess(true);
