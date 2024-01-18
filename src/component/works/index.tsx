@@ -1,6 +1,6 @@
 import itera from "../../assets/Logo_ITERA.png";
 import impactByte from "../../assets/impactbyte.jpeg";
-import ocbc from "../../assets/ocbc.png";
+import ocbc from "../../assets/Logo-ocbc.png";
 import "./index.css";
 import { useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
@@ -24,13 +24,15 @@ export default function Works() {
   const data = [
     {
       photo1: ocbc,
-      title: "PT. Bank OCBC NISP Tbk",
+      title: "OCBC Bank Indonesia (Outsource)",
       postiton: "Software Engineer",
       timeStart: "August 2022",
       timeEnd: "Current",
       content: [
-        "Followed SDLC best practices within Agile environment to produce rapid iterations for clients.",
-        "Use Agile methodologies (Scrum) to collaborated with stakeholders during development processes and use Jira as a support tools.",
+        "Create and improve web app features while following a set of rules (SOP) to make the frontend team work better together. Use technologies like ReactJS, TypeScript, HTML, CSS, and Ant Design.",
+        "Applied Agile methodologies, specifically Scrum, to foster collaboration with stakeholders throughout the development process. Leveraged Jira as a supporting tool for effective project management.",
+        "Implementing frontend best practices to enhance stability and minimize bugs.",
+        "Diligently testing and refining product features to guarantee an exceptional user experience across both customer-facing interfaces and internal dashboard components.",
       ],
     },
     {
@@ -87,13 +89,13 @@ export default function Works() {
             ))}
           </ol>
           <button
-            className="btn-slide block lg:hidden lg:group-hover:block right-6 xl:right-[13%]"
+            className="absolute btn-slide block lg:hidden lg:group-hover:block right-8 xl:right-[5%]"
             onClick={handleNextBtn}
           >
             <ChevronRightIcon />
           </button>
           <button
-            className="btn-slide block lg:hidden lg:group-hover:block left-6 xl:left-[13%]"
+            className="absolute btn-slide block lg:hidden lg:group-hover:block left-8 xl:left-[5%]"
             onClick={handlePrevBtn}
           >
             <ChevronLeftIcon />

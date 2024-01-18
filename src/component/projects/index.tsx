@@ -74,13 +74,13 @@ export default function Projects() {
             )}
           </div>
           <button
-            className="btn-slide block lg:hidden lg:group-hover:block right-6 xl:right-[13%]"
+            className="absolute btn-slide block lg:hidden lg:group-hover:block right-8 xl:right-[5%]"
             onClick={handleNextBtn}
           >
             <ChevronRightIcon />
           </button>
           <button
-            className="btn-slide block lg:hidden lg:group-hover:block left-6 xl:left-[13%]"
+            className="absolute btn-slide block lg:hidden lg:group-hover:block left-8 xl:left-[5%]"
             onClick={handlePrevBtn}
           >
             <ChevronLeftIcon />

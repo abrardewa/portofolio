@@ -25,18 +25,11 @@ export default function Home() {
   const handleDownload = () => {
     setLoading(true);
     setTimeout(() => {
-      fetch("CV_abrardewa.pdf").then((response) => {
-        response.blob().then((blob) => {
-          const fileURL = window.URL.createObjectURL(blob);
-          let alink = document.createElement("a");
-          alink.href = fileURL;
-          alink.download = "CV_abrardewa.pdf";
-          alink.click();
-        });
-        if (response.status === 200) {
-          setSuccess(true);
-        }
-      });
+      const downloadLink = document.createElement("a");
+      downloadLink.href = "/CV_abrardewa.pdf"; // Path to your PDF file
+      downloadLink.download = "CV_abrardewa.pdf"; // File name
+      downloadLink.click();
+      setSuccess(true);
       setLoading(false);
     }, 300);
   };
@@ -45,7 +38,7 @@ export default function Home() {
     let today = moment();
     let startExp = moment("29 08 2022", "DD MM YYYY");
     let longExpYear = today.diff(startExp, "year");
-    return longExpYear
+    return longExpYear;
   };
 
   return (
@@ -144,9 +137,7 @@ export default function Home() {
             />
             +
           </div>
-          <p className="long-exp-text">
-            Years Experience
-          </p>
+          <p className="long-exp-text">Years Experience</p>
         </div>
         <div className="item-exp">
           <div className="long-exp-content">
