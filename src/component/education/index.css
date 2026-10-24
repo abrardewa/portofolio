@@ -1,3 +1,5 @@
+@reference "../../index.css";
+
 .education {
   @apply mx-auto max-w-screen-2xl py-12 px-6 xl:px-36;
 }
@@ -29,5 +31,5 @@
   @apply hidden lg:flex justify-around items-center;
 }
 .edu-main .content .right .picture {
-  @apply flex object-contain w-1/12 md:w-2/5 lg:w-7/12 h-auto shadow-xl rounded-3xl bg-bg-picture outline-dashed outline-bg-picture outline-offset-4 ring ring-bg-picture ring-offset-8;
+  @apply flex object-contain w-1/12 md:w-2/5 lg:w-7/12 h-auto shadow-xl rounded-3xl bg-bg-picture outline-dashed outline-bg-picture outline-offset-4 ring-3 ring-bg-picture ring-offset-8;
 }

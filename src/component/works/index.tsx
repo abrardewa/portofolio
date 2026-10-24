@@ -24,15 +24,17 @@ export default function Works() {
   const data = [
     {
       photo1: ocbc,
-      title: "OCBC Bank Indonesia (Outsource)",
+      title: "PT. Bank OCBC NISP Tbk. (Contracted by PT. Nusantara Duta Solusindo)",
       postiton: "Software Engineer",
       timeStart: "August 2022",
       timeEnd: "Current",
       content: [
-        "Create and improve web app features while following a set of rules (SOP) to make the frontend team work better together. Use technologies like ReactJS, TypeScript, HTML, CSS, and Ant Design.",
-        "Applied Agile methodologies, specifically Scrum, to foster collaboration with stakeholders throughout the development process. Leveraged Jira as a supporting tool for effective project management.",
-        "Implementing frontend best practices to enhance stability and minimize bugs.",
-        "Diligently testing and refining product features to guarantee an exceptional user experience across both customer-facing interfaces and internal dashboard components.",
+        "Designed, developed, and enhanced scalable applications as a Software Engineer, contributing across both frontend and backend systems using ReactJS, TypeScript, Golang, and modern web technologies.",
+        "Built and maintained microservices-based architectures, leveraging RabbitMQ for asynchronous messaging, Consul for service discovery, PostgreSQL for relational data management, and Redis for caching and performance optimization.",
+        "Containerized applications using Docker to ensure consistent development, testing, and deployment environments across services.",
+        "Collaborated in Agile (Scrum) environments with cross-functional teams and stakeholders, utilizing Jira for effective sprint planning, tracking, and delivery.",
+        "Applied software engineering best practices, including clean architecture and code reviews, to improve system stability, scalability, and maintainability while reducing bugs.",
+        "Conducted thorough testing, debugging, and performance optimization to ensure high-quality user experiences across customer-facing platforms and internal systems.",
       ],
     },
     {
@@ -42,19 +44,19 @@ export default function Works() {
       timeStart: "August 2021",
       timeEnd: "December 2021",
       content: [
-        "Use Agile methodologies (Scrum) to collaborated with stakeholders during development processes and use Jira as a support tools.",
+        "Used wireframes, mock-ups and prototypes to establish user interface design and architecture.",
         "Conducted live user testing of components and functionality to evaluate effectiveness of designs and enhancements.",
       ],
     },
     {
       photo1: itera,
       title: "Institut Teknologi Sumatera",
-      postiton: "Frontend Mobile Developer",
+      postiton: "Frontend Developer",
       timeStart: "May 2021",
       timeEnd: "August 2021",
       content: [
         "Followed SDLC best practices within Agile environment to produce rapid iterations for clients.",
-        "Collaborated with stakeholders during development processes to confirm creative proposals and design best practices",
+        "Collaborated with stakeholders during development processes to confirm creative proposals and design best practices.",
         "Coded using JavaScript and CSS using React Native and Bootstrap to develop features for mobile platforms.",
       ],
     },
@@ -84,8 +86,8 @@ export default function Works() {
             </div>
           </div>
           <ol type="1" className="list">
-            {data[state].content.map((item) => (
-              <li>{item}</li>
+            {data[state].content.map((item, index) => (
+              <li key={index}>{item}</li>
             ))}
           </ol>
           <button

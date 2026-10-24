@@ -1,3 +1,5 @@
+@reference "../../index.css";
+
 .main-home {
   @apply mx-auto max-w-screen-2xl h-full lg:pt-10 px-6 xl:px-36;
 }
@@ -14,7 +16,7 @@
   @apply flex justify-center h-fit;
 }
 .picture-content {
-  @apply flex object-contain w-3/4 md:w-2/5 lg:w-3/4 xl:w-full h-auto shadow-xl rounded-full bg-bg-picture outline-dashed outline-bg-picture outline-offset-4 ring ring-bg-picture ring-offset-8;
+  @apply flex object-contain w-3/4 md:w-2/5 lg:w-3/4 xl:w-full h-auto shadow-xl rounded-full bg-bg-picture outline-dashed outline-bg-picture outline-offset-4 ring-3 ring-bg-picture ring-offset-8;
 }
 .content-title {
   @apply font-semibold text-xl md:text-2xl lg:text-4xl xl:text-5xl text-text-dark pt-12 lg:pt-24 leading-relaxed text-center lg:text-start dark:text-soft-white;
@@ -23,7 +25,7 @@
   @apply font-semibold text-base md:text-lg lg:text-2xl text-text-dark pt-2 pb-8 leading-relaxed dark:text-soft-white;
 }
 .button-download {
-  @apply flex flex-row items-center self-center lg:self-start justify-center lg:justify-start px-4 bg-button-download rounded-2xl w-fit shadow-sm mt-8;
+  @apply flex flex-row items-center self-center lg:self-start justify-center lg:justify-start px-4 bg-button-download rounded-2xl w-fit shadow-xs mt-8;
 }
 .button-download .text {
   @apply text-soft-white my-2 mx-2 text-sm  lg:text-base;

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 import "./index.css";
-import { ReactComponent as Linkedin } from "../../assets/linkedin.svg";
-import { ReactComponent as Github } from "../../assets/github.svg";
-import { ReactComponent as Mail } from "../../assets/mail.svg";
-import { ReactComponent as Logo } from "../../assets/LogoNew.svg";
-import { Disclosure } from "@headlessui/react";
+import Linkedin from "../../assets/linkedin.svg?react";
+import Github from "../../assets/github.svg?react";
+import Mail from "../../assets/mail.svg?react";
+import Logo from "../../assets/LogoNew.svg?react";
+import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import {
   Bars3Icon,
   MoonIcon,
@@ -84,7 +84,7 @@ export default function Navbar() {
           <div className="main-navbar">
             <div className="split">
               <div className="mobile">
-                <Disclosure.Button className="disclosure">
+                <DisclosureButton className="disclosure">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon
@@ -97,7 +97,7 @@ export default function Navbar() {
                       aria-hidden="true"
                     />
                   )}
-                </Disclosure.Button>
+                </DisclosureButton>
               </div>
               <div className="normal">
                 <div className="hidden md:block">
@@ -131,7 +131,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <DisclosurePanel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
                 <button
@@ -151,7 +151,7 @@ export default function Navbar() {
                 </button>
               ))}
             </div>
-          </Disclosure.Panel>
+          </DisclosurePanel>
         </>
       )}
     </Disclosure>

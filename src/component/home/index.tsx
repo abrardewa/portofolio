@@ -1,22 +1,59 @@
 import "./index.css";
 import Photo from "../../assets/fotoNew.png";
-import { ReactComponent as Loading } from "../../assets/loading.svg";
-import { ReactComponent as Download } from "../../assets/download.svg";
-import { ReactComponent as Check } from "../../assets/check.svg";
-import { ReactComponent as Antd } from "../../assets/antd.svg";
-import { ReactComponent as Flutter } from "../../assets/flutter.svg";
-import { ReactComponent as Css } from "../../assets/css.svg";
-import { ReactComponent as CI } from "../../assets/ci.svg";
-import { ReactComponent as JS } from "../../assets/js.svg";
-import { ReactComponent as Less } from "../../assets/less.svg";
-import { ReactComponent as Git } from "../../assets/mdi_git.svg";
-import { ReactComponent as Tailwind } from "../../assets/tailwind.svg";
-import { ReactComponent as Ts } from "../../assets/ts.svg";
-import { ReactComponent as Php } from "../../assets/php.svg";
-import { ReactComponent as Reac } from "../../assets/react.svg";
+import Loading from "../../assets/loading.svg?react";
+import Download from "../../assets/download.svg?react";
+import Check from "../../assets/check.svg?react";
+import Antd from "../../assets/antd.svg?react";
+import Flutter from "../../assets/flutter.svg?react";
+import Css from "../../assets/css.svg?react";
+import CI from "../../assets/ci.svg?react";
+import JS from "../../assets/js.svg?react";
+import Less from "../../assets/less.svg?react";
+import Git from "../../assets/mdi_git.svg?react";
+import Tailwind from "../../assets/tailwind.svg?react";
+import Ts from "../../assets/ts.svg?react";
+import Php from "../../assets/php.svg?react";
+import Reac from "../../assets/react.svg?react";
+import Go from "../../assets/go.svg?react";
+import NextJs from "../../assets/nextjs.svg?react";
+import Bootstrap from "../../assets/bootstrap.svg?react";
+import Postgresql from "../../assets/postgresql.svg?react";
+import Redis from "../../assets/redis.svg?react";
+import RabbitMQ from "../../assets/rabbitmq.svg?react";
+import Consul from "../../assets/consul.svg?react";
+import Docker from "../../assets/docker.svg?react";
+import Jenkins from "../../assets/jenkins.svg?react";
 import { useState } from "react";
 import moment from "moment";
-import CountUp from "react-countup";
+import CountUpImport from "react-countup";
+
+// react-countup ships CommonJS only; Vite returns its module.exports object as the default import
+const CountUp =
+  (CountUpImport as unknown as { default?: typeof CountUpImport }).default ??
+  CountUpImport;
+
+const skills = [
+  { Icon: JS, name: "JavaScript" },
+  { Icon: Ts, name: "TypeScript" },
+  { Icon: Go, name: "Go" },
+  { Icon: Reac, name: "React" },
+  { Icon: NextJs, name: "Next.js" },
+  { Icon: Php, name: "PHP" },
+  { Icon: CI, name: "CodeIgniter" },
+  { Icon: Flutter, name: "Flutter" },
+  { Icon: Css, name: "Css" },
+  { Icon: Less, name: "Less" },
+  { Icon: Tailwind, name: "Tailwind Css" },
+  { Icon: Bootstrap, name: "Bootstrap" },
+  { Icon: Antd, name: "Antd" },
+  { Icon: Postgresql, name: "PostgreSQL" },
+  { Icon: Redis, name: "Redis" },
+  { Icon: RabbitMQ, name: "RabbitMQ" },
+  { Icon: Consul, name: "Consul" },
+  { Icon: Docker, name: "Docker" },
+  { Icon: Jenkins, name: "Jenkins" },
+  { Icon: Git, name: "Git" },
+];
 
 export default function Home() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -60,56 +97,16 @@ export default function Home() {
                 Abrar Dewa Pratama Barus
               </span>
             </div>
-            <div className="sub-title">Frontend Engineer Enthusiast</div>
+            <div className="sub-title">Software Engineer</div>
           </div>
           <div className="flex flex-col w-fit text-soft-dark">
             <div className="skills">
-              {/* <div className='skills-child'> */}
-              <div className="items">
-                <JS className="logo" />
-                <p>JavaScript</p>
-              </div>
-              <div className="items">
-                <Ts className="logo" />
-                <p>TypeScript</p>
-              </div>
-              <div className="items">
-                <Php className="logo" />
-                <p>PHP</p>
-              </div>
-              <div className="items">
-                <Reac className="logo" />
-                <p>React</p>
-              </div>
-              <div className="items">
-                <CI className="logo" />
-                <p>CodeIgniter</p>
-              </div>
-              <div className="items">
-                <Flutter className="logo" />
-                <p>Flutter</p>
-              </div>
-              <div className="items">
-                <Css className="logo" />
-                <p>Css</p>
-              </div>
-              <div className="items">
-                <Less className="logo" />
-                <p>Less</p>
-              </div>
-              <div className="items">
-                <Tailwind className="logo" />
-                <p>Tailwind Css</p>
-              </div>
-              <div className="items">
-                <Antd className="logo" />
-                <p>Antd</p>
-              </div>
-              <div className="items">
-                <Git className="logo" />
-                <p>Git</p>
-              </div>
-              {/* </div> */}
+              {skills.map(({ Icon, name }) => (
+                <div className="items" key={name}>
+                  <Icon className="logo" />
+                  <p>{name}</p>
+                </div>
+              ))}
             </div>
             <button className="button-download" onClick={handleDownload}>
               {loading ? (
