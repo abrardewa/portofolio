@@ -84,8 +84,8 @@ export default function Works() {
             </div>
           </div>
           <ol type="1" className="list">
-            {data[state].content.map((item) => (
-              <li>{item}</li>
+            {data[state].content.map((item, index) => (
+              <li key={index}>{item}</li>
             ))}
           </ol>
           <button
