@@ -1,22 +1,27 @@
 import "./index.css";
 import Photo from "../../assets/fotoNew.png";
-import { ReactComponent as Loading } from "../../assets/loading.svg";
-import { ReactComponent as Download } from "../../assets/download.svg";
-import { ReactComponent as Check } from "../../assets/check.svg";
-import { ReactComponent as Antd } from "../../assets/antd.svg";
-import { ReactComponent as Flutter } from "../../assets/flutter.svg";
-import { ReactComponent as Css } from "../../assets/css.svg";
-import { ReactComponent as CI } from "../../assets/ci.svg";
-import { ReactComponent as JS } from "../../assets/js.svg";
-import { ReactComponent as Less } from "../../assets/less.svg";
-import { ReactComponent as Git } from "../../assets/mdi_git.svg";
-import { ReactComponent as Tailwind } from "../../assets/tailwind.svg";
-import { ReactComponent as Ts } from "../../assets/ts.svg";
-import { ReactComponent as Php } from "../../assets/php.svg";
-import { ReactComponent as Reac } from "../../assets/react.svg";
+import Loading from "../../assets/loading.svg?react";
+import Download from "../../assets/download.svg?react";
+import Check from "../../assets/check.svg?react";
+import Antd from "../../assets/antd.svg?react";
+import Flutter from "../../assets/flutter.svg?react";
+import Css from "../../assets/css.svg?react";
+import CI from "../../assets/ci.svg?react";
+import JS from "../../assets/js.svg?react";
+import Less from "../../assets/less.svg?react";
+import Git from "../../assets/mdi_git.svg?react";
+import Tailwind from "../../assets/tailwind.svg?react";
+import Ts from "../../assets/ts.svg?react";
+import Php from "../../assets/php.svg?react";
+import Reac from "../../assets/react.svg?react";
 import { useState } from "react";
 import moment from "moment";
-import CountUp from "react-countup";
+import CountUpImport from "react-countup";
+
+// react-countup ships CommonJS only; Vite returns its module.exports object as the default import
+const CountUp =
+  (CountUpImport as unknown as { default?: typeof CountUpImport }).default ??
+  CountUpImport;
 
 export default function Home() {
   const [loading, setLoading] = useState<boolean>(false);
