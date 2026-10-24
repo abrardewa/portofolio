@@ -14,6 +14,15 @@ import Tailwind from "../../assets/tailwind.svg?react";
 import Ts from "../../assets/ts.svg?react";
 import Php from "../../assets/php.svg?react";
 import Reac from "../../assets/react.svg?react";
+import Go from "../../assets/go.svg?react";
+import NextJs from "../../assets/nextjs.svg?react";
+import Bootstrap from "../../assets/bootstrap.svg?react";
+import Postgresql from "../../assets/postgresql.svg?react";
+import Redis from "../../assets/redis.svg?react";
+import RabbitMQ from "../../assets/rabbitmq.svg?react";
+import Consul from "../../assets/consul.svg?react";
+import Docker from "../../assets/docker.svg?react";
+import Jenkins from "../../assets/jenkins.svg?react";
 import { useState } from "react";
 import moment from "moment";
 import CountUpImport from "react-countup";
@@ -22,6 +31,29 @@ import CountUpImport from "react-countup";
 const CountUp =
   (CountUpImport as unknown as { default?: typeof CountUpImport }).default ??
   CountUpImport;
+
+const skills = [
+  { Icon: JS, name: "JavaScript" },
+  { Icon: Ts, name: "TypeScript" },
+  { Icon: Go, name: "Go" },
+  { Icon: Reac, name: "React" },
+  { Icon: NextJs, name: "Next.js" },
+  { Icon: Php, name: "PHP" },
+  { Icon: CI, name: "CodeIgniter" },
+  { Icon: Flutter, name: "Flutter" },
+  { Icon: Css, name: "Css" },
+  { Icon: Less, name: "Less" },
+  { Icon: Tailwind, name: "Tailwind Css" },
+  { Icon: Bootstrap, name: "Bootstrap" },
+  { Icon: Antd, name: "Antd" },
+  { Icon: Postgresql, name: "PostgreSQL" },
+  { Icon: Redis, name: "Redis" },
+  { Icon: RabbitMQ, name: "RabbitMQ" },
+  { Icon: Consul, name: "Consul" },
+  { Icon: Docker, name: "Docker" },
+  { Icon: Jenkins, name: "Jenkins" },
+  { Icon: Git, name: "Git" },
+];
 
 export default function Home() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -69,52 +101,12 @@ export default function Home() {
           </div>
           <div className="flex flex-col w-fit text-soft-dark">
             <div className="skills">
-              {/* <div className='skills-child'> */}
-              <div className="items">
-                <JS className="logo" />
-                <p>JavaScript</p>
-              </div>
-              <div className="items">
-                <Ts className="logo" />
-                <p>TypeScript</p>
-              </div>
-              <div className="items">
-                <Php className="logo" />
-                <p>PHP</p>
-              </div>
-              <div className="items">
-                <Reac className="logo" />
-                <p>React</p>
-              </div>
-              <div className="items">
-                <CI className="logo" />
-                <p>CodeIgniter</p>
-              </div>
-              <div className="items">
-                <Flutter className="logo" />
-                <p>Flutter</p>
-              </div>
-              <div className="items">
-                <Css className="logo" />
-                <p>Css</p>
-              </div>
-              <div className="items">
-                <Less className="logo" />
-                <p>Less</p>
-              </div>
-              <div className="items">
-                <Tailwind className="logo" />
-                <p>Tailwind Css</p>
-              </div>
-              <div className="items">
-                <Antd className="logo" />
-                <p>Antd</p>
-              </div>
-              <div className="items">
-                <Git className="logo" />
-                <p>Git</p>
-              </div>
-              {/* </div> */}
+              {skills.map(({ Icon, name }) => (
+                <div className="items" key={name}>
+                  <Icon className="logo" />
+                  <p>{name}</p>
+                </div>
+              ))}
             </div>
             <button className="button-download" onClick={handleDownload}>
               {loading ? (
