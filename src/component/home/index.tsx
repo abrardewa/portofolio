@@ -97,7 +97,7 @@ export default function Home() {
                 Abrar Dewa Pratama Barus
               </span>
             </div>
-            <div className="sub-title">Frontend Engineer Enthusiast</div>
+            <div className="sub-title">Software Engineer</div>
           </div>
           <div className="flex flex-col w-fit text-soft-dark">
             <div className="skills">
